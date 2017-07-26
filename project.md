@@ -447,15 +447,6 @@ paste0("Accuracy on testing:",rfMod.pca.subset.testing.acc)
 This shows that PCA isn't more accurate or faster
 The `rfMod.exclude` performs slightly better then the 'rfMod.cleaned' so we'll stick with the `rfMod.exclude` model as the best model to use for predicting the test set.
 Because with an accuracy of 97.6% and an estimated OOB error rate of 0.42%, this is the best model.
-Before the final predictions of the testing data set we will examine the chosen model more deeply using a plot.
-
-```r
-par(mfrow=c(1,2)) 
-varImpPlot(rfMod.exclude,cex=0.7,pch=16,main='Variable Importance Plot:rfMod.exclude')
-plot(rfMod.exclude,,cex=0.7,main='Error vs No. of trees plot')
-```
-
-![](Conclusion plots 1.jpeg)
 
 # Test results
 
