@@ -313,13 +313,11 @@ paste0(<span class="hljs-string">"Accuracy on testing:"</span>,rfMod.pca.subset.
 <h2><a id="Conclusion_444"></a>Conclusion</h2>
 <p>This shows that PCA isn’t more accurate or faster<br>
 The <code>rfMod.exclude</code> performs slightly better then the ‘rfMod.cleaned’ so we’ll stick with the <code>rfMod.exclude</code> model as the best model to use for predicting the test set.<br>
-Because with an accuracy of 97.6% and an estimated OOB error rate of 0.42%, this is the best model.<br>
-Before the final predictions of the testing data set we will examine the chosen model more deeply using a plot.</p>
+Because with an accuracy of 97.6% and an estimated OOB error rate of 0.42%, this is the best model.</p>
 <pre><code class="language-r">par(mfrow=c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>)) 
 varImpPlot(rfMod.exclude,cex=<span class="hljs-number">0.7</span>,pch=<span class="hljs-number">16</span>,main=<span class="hljs-string">'Variable Importance Plot:rfMod.exclude'</span>)
 plot(rfMod.exclude,,cex=<span class="hljs-number">0.7</span>,main=<span class="hljs-string">'Error vs No. of trees plot'</span>)
 </code></pre>
-<p><img src="Conclusion plots 1.jpeg" alt=""/></p>
 <h1><a id="Test_results_459"></a>Test results</h1>
 <p>Even though I have chosen the <code>rfMod.exclude</code> it would still be nice to see what the other 3 models would predict on the final test set.<br>
 Let’s look at predictions for all models on the final test set.</p>
